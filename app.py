@@ -5,13 +5,18 @@ import time
 
 app = Flask(__name__)
 
-# Your Twilio credentials
-TWILIO_ACCOUNT_SID = 'YOUR_TWILIO_ACCOUNT_SID'
-TWILIO_AUTH_TOKEN = 'YOUR_TWILIO_AUTH_TOKEN'
+# YOUR TWILIO CREDENTIALS GO HERE
+TWILIO_ACCOUNT_SID = 'AC9e0cefa0961ffecb451016cfc5a8cbd2'  # Replace with your actual SID
+TWILIO_AUTH_TOKEN = '4eac8bbfcffb97c66d5e1d10a360bb22'     # Replace with your actual token
 client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+
+# Your Twilio phone number
+TWILIO_PHONE_NUMBER = '+13158401423'  # Replace with your Twilio number
 
 # Store for call results
 call_results = {}
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
